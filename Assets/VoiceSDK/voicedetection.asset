@@ -21,9 +21,9 @@ MonoBehaviour:
     lang: en
     isPrivate: 1
     createdAt: 2026-06-03T19:02:53-0700
-    trainingStatus: 3
-    lastTrainDuration: 131
-    lastTrainedAt: 2026-06-03T19:09:05-0700
+    trainingStatus: 1
+    lastTrainDuration: 314
+    lastTrainedAt: 2026-06-03T19:18:03-0700
     nextTrainAt: 2026-06-03T19:12:49-0700
     intents:
     - id: 2478435035925924

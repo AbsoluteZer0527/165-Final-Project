@@ -4,6 +4,7 @@ using UnityEngine.Networking;
 using System.Collections;
 using System.Collections.Generic;
 using Newtonsoft.Json;
+using TMPro;
 
 // Put this on each Agent GameObject
 public class GeminiAgent : MonoBehaviour
@@ -13,9 +14,26 @@ public class GeminiAgent : MonoBehaviour
 
     [SerializeField] private string apiKey = "YOUR_GEMINI_KEY"; //Andrew's Gemini Key
 
+    [Header("References")]
+    [SerializeField] private Transform playerTransform;
+    [SerializeField] private TextMeshProUGUI textBubble;
+
     private string endpoint = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent";
 
     private List<Dictionary<string, object>> chatHistory = new();
+
+    private bool isSpeaking = false;
+
+    void LateUpdate()
+    {
+        // Face player while speaking
+        if (isSpeaking)
+        {
+            Vector3 playerDirection = playerTransform.position - transform.position;
+            playerDirection.y = 0;
+            transform.rotation = Quaternion.LookRotation(playerDirection);
+        }
+    }
 
     public void ReceiveMessage(string userMessage)
     {
@@ -86,6 +104,17 @@ public class GeminiAgent : MonoBehaviour
     void OnResponseReceived(string response)
     {
         // Hook up your UI text or TTS here
-        // e.g. GetComponent<TextMeshPro>().text = response;
+        isSpeaking = true;
+        StartCoroutine(ShowText(response));
+    }
+
+    IEnumerator ShowText(string text)
+    {
+        textBubble.text = text;
+        textBubble.transform.parent.gameObject.SetActive(true);
+        yield return new WaitForSeconds(3f);
+        textBubble.text = "";
+        textBubble.transform.parent.gameObject.SetActive(false);
+        isSpeaking = false;
     }
 }
