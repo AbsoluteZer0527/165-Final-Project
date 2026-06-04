@@ -1915,6 +1915,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::VoiceTranscription
   appVoiceExperience: {fileID: 490606044}
   activateVoiceInput: {fileID: 4935171720348284982, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  activationRange: 3
 --- !u!1001 &721367125
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2205,13 +2206,27 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1087246954}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2a8f6f3ecab260c4baa94605b4a70fed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPCBehavior
   changeStateInterval: 3
   moveSpeed: 1
+--- !u!114 &1087246961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1087246954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 059028a1a9b184d4a9a7d74ee613e0fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GeminiAgent
+  systemPrompt: You are a helpful assistant.
+  apiKey: YOUR_GEMINI_KEY
 --- !u!1 &1774585283
 GameObject:
   m_ObjectHideFlags: 0
@@ -2399,15 +2414,7 @@ PrefabInstance:
       objectReference: {fileID: 9100000, guid: 1d1cd9ef7dc2198418de4c6274cc9637, type: 2}
     - target: {fileID: 5866666021909216657, guid: 0d34be7d71b712f4180c1abda94118d4, type: 3}
       propertyPath: m_WarningMessage
-      value: "\nBinding warning: Some generic clip(s) animate transforms that are
-        already bound by a Humanoid avatar. These transforms can only be changed
-        by Humanoid clips.\n\tTransform 'mixamorig1:Hips'\n\tTransform 'mixamorig1:LeftHandThumb1'\n\tTransform
-        'mixamorig1:LeftHandPinky2'\n\tTransform 'mixamorig1:RightHand'\n\tTransform
-        'mixamorig1:LeftHandMiddle2'\n\tTransform 'mixamorig1:RightFoot'\n\tTransform
-        'mixamorig1:Spine1'\n\tTransform 'mixamorig1:RightLeg'\n\tTransform 'mixamorig1:RightHandMiddle2'\n\tTransform
-        'mixamorig1:Hips'\n\tand more ...\n\tFrom animation clip 'mixamo.com'\n\tFrom
-        animation clip 'mixamo.com'\n\tFrom animation clip 'mixamo.com'\n\tFrom animation
-        clip 'mixamo.com'"
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2419,6 +2426,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0d34be7d71b712f4180c1abda94118d4, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1087246957}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0d34be7d71b712f4180c1abda94118d4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1087246961}
   m_SourcePrefab: {fileID: 100100000, guid: 0d34be7d71b712f4180c1abda94118d4, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
@@ -2430,5 +2440,5 @@ SceneRoots:
   - {fileID: 2090337767}
   - {fileID: 721367125}
   - {fileID: 1042040599}
-  - {fileID: 230515322}
   - {fileID: 490606045}
+  - {fileID: 230515322}

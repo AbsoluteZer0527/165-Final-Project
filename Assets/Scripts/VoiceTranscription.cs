@@ -10,6 +10,9 @@ public class VoiceTranscription : MonoBehaviour
     [Header("Input References")]
     [SerializeField] private InputActionReference activateVoiceInput;
 
+    [Header("Settings")]
+    [SerializeField] private float activationRange = 3f; // how close to talk to an agent
+
     private string lastTranscription;
 
     void Start()
@@ -49,7 +52,33 @@ public class VoiceTranscription : MonoBehaviour
 
     void SendToAgent(string text)
     {
-        // hook up to your GeminiAgent script here
+        GeminiAgent nearestAgent = FindNearestAgent();
+        if (nearestAgent != null)
+        {
+            nearestAgent.ReceiveMessage(text);
+        }
+        else
+        {
+            Debug.Log("No agent in range!");
+        }
+    }
+
+    GeminiAgent FindNearestAgent()
+    {
+        GeminiAgent[] agents = FindObjectsByType<GeminiAgent>();
+        GeminiAgent nearest = null;
+        float minDist = activationRange; // only talk to agents within range
+
+        foreach (var agent in agents)
+        {
+            float dist = Vector3.Distance(transform.position, agent.transform.position);
+            if (dist < minDist)
+            {
+                minDist = dist;
+                nearest = agent;
+            }
+        }
+        return nearest;
     }
 
     void OnDestroy()
