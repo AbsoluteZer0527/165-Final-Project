@@ -119,6 +119,1502 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &230515317
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 230515322}
+  - component: {fileID: 230515321}
+  - component: {fileID: 230515320}
+  - component: {fileID: 230515319}
+  - component: {fileID: 230515318}
+  m_Layer: 0
+  m_Name: '[BuildingBlock] Large Language Models'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &230515318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 230515317}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe8173e4ba580074ebec38b552e3214d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _category: LLM Agent
+  registry:
+    handles:
+    - enabled: 0
+      typeName: UnityEngine.Transform, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      inspectedMembers:
+      - enabled: 0
+        typeName: UnityEngine.Transform, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: DetachChildren
+        _editorSelectedGizmoIndex: 0
+      - enabled: 0
+        typeName: UnityEngine.Transform, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: SetAsFirstSibling
+        _editorSelectedGizmoIndex: 0
+      - enabled: 0
+        typeName: UnityEngine.Transform, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: SetAsLastSibling
+        _editorSelectedGizmoIndex: 0
+      - enabled: 0
+        typeName: UnityEngine.Transform, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: SendTransformChangedScale
+        _editorSelectedGizmoIndex: 0
+      - enabled: 0
+        typeName: UnityEngine.Transform, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: position
+        _editorSelectedGizmoIndex: 0
+      - enabled: 0
+        typeName: UnityEngine.Transform, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: localPosition
+        _editorSelectedGizmoIndex: 0
+      - enabled: 0
+        typeName: UnityEngine.Transform, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: eulerAngles
+        _editorSelectedGizmoIndex: 0
+      - enabled: 0
+        typeName: UnityEngine.Transform, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: localEulerAngles
+        _editorSelectedGizmoIndex: 0
+      - enabled: 0
+        typeName: UnityEngine.Transform, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: right
+        _editorSelectedGizmoIndex: 0
+      - enabled: 0
+        typeName: UnityEngine.Transform, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: up
+        _editorSelectedGizmoIndex: 0
+      - enabled: 0
+        typeName: UnityEngine.Transform, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: forward
+        _editorSelectedGizmoIndex: 0
+      - enabled: 0
+        typeName: UnityEngine.Transform, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: rotation
+        _editorSelectedGizmoIndex: 0
+      - enabled: 0
+        typeName: UnityEngine.Transform, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: localRotation
+        _editorSelectedGizmoIndex: 0
+      - enabled: 0
+        typeName: UnityEngine.Transform, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: rotationOrder
+        _editorSelectedGizmoIndex: 0
+      - enabled: 0
+        typeName: UnityEngine.Transform, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: localScale
+        _editorSelectedGizmoIndex: 0
+      - enabled: 0
+        typeName: UnityEngine.Transform, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: parent
+        _editorSelectedGizmoIndex: 0
+      - enabled: 0
+        typeName: UnityEngine.Transform, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: parentInternal
+        _editorSelectedGizmoIndex: 0
+      - enabled: 0
+        typeName: UnityEngine.Transform, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: worldToLocalMatrix
+        _editorSelectedGizmoIndex: 0
+      - enabled: 0
+        typeName: UnityEngine.Transform, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: localToWorldMatrix
+        _editorSelectedGizmoIndex: 0
+      - enabled: 0
+        typeName: UnityEngine.Transform, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: root
+        _editorSelectedGizmoIndex: 0
+      - enabled: 0
+        typeName: UnityEngine.Transform, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: childCount
+        _editorSelectedGizmoIndex: 0
+      - enabled: 0
+        typeName: UnityEngine.Transform, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: lossyScale
+        _editorSelectedGizmoIndex: 0
+      - enabled: 0
+        typeName: UnityEngine.Transform, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: hasChanged
+        _editorSelectedGizmoIndex: 0
+      - enabled: 0
+        typeName: UnityEngine.Transform, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: hierarchyCapacity
+        _editorSelectedGizmoIndex: 0
+      - enabled: 0
+        typeName: UnityEngine.Transform, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: hierarchyCount
+        _editorSelectedGizmoIndex: 0
+      - enabled: 0
+        typeName: UnityEngine.Transform, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: constrainProportionsScale
+        _editorSelectedGizmoIndex: 0
+    - enabled: 1
+      typeName: Meta.XR.MLRunnerBlocks.LlmAgent, Meta.XR.MLRunnerBlocks, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      inspectedMembers:
+      - enabled: 0
+        typeName: Meta.XR.MLRunnerBlocks.LlmAgent, Meta.XR.MLRunnerBlocks, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: Awake
+        _editorSelectedGizmoIndex: 0
+      - enabled: 0
+        typeName: Meta.XR.MLRunnerBlocks.LlmAgent, Meta.XR.MLRunnerBlocks, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: History
+        _editorSelectedGizmoIndex: 0
+      - enabled: 0
+        typeName: Meta.XR.MLRunnerBlocks.LlmAgent, Meta.XR.MLRunnerBlocks, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: profile
+        _editorSelectedGizmoIndex: 0
+      - enabled: 1
+        typeName: Meta.XR.MLRunnerBlocks.LlmAgent, Meta.XR.MLRunnerBlocks, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: history
+        _editorSelectedGizmoIndex: 0
+      - enabled: 0
+        typeName: Meta.XR.MLRunnerBlocks.LlmAgent, Meta.XR.MLRunnerBlocks, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: onPromptSent
+        _editorSelectedGizmoIndex: 0
+      - enabled: 0
+        typeName: Meta.XR.MLRunnerBlocks.LlmAgent, Meta.XR.MLRunnerBlocks, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: onResponseReceived
+        _editorSelectedGizmoIndex: 0
+      - enabled: 0
+        typeName: Meta.XR.MLRunnerBlocks.LlmAgent, Meta.XR.MLRunnerBlocks, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: _provider
+        _editorSelectedGizmoIndex: 0
+      - enabled: 0
+        typeName: Meta.XR.MLRunnerBlocks.LlmAgent, Meta.XR.MLRunnerBlocks, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: _cam
+        _editorSelectedGizmoIndex: 0
+    - enabled: 0
+      typeName: Meta.XR.MLRunnerBlocks.LlmAgentHelper, Meta.XR.MLRunnerBlocks, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      inspectedMembers:
+      - enabled: 0
+        typeName: Meta.XR.MLRunnerBlocks.LlmAgentHelper, Meta.XR.MLRunnerBlocks,
+          Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: Awake
+        _editorSelectedGizmoIndex: 0
+      - enabled: 0
+        typeName: Meta.XR.MLRunnerBlocks.LlmAgentHelper, Meta.XR.MLRunnerBlocks,
+          Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: Update
+        _editorSelectedGizmoIndex: 0
+      - enabled: 0
+        typeName: Meta.XR.MLRunnerBlocks.LlmAgentHelper, Meta.XR.MLRunnerBlocks,
+          Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: SendPrompt
+        _editorSelectedGizmoIndex: 0
+      - enabled: 0
+        typeName: Meta.XR.MLRunnerBlocks.LlmAgentHelper, Meta.XR.MLRunnerBlocks,
+          Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: userInput
+        _editorSelectedGizmoIndex: 0
+      - enabled: 0
+        typeName: Meta.XR.MLRunnerBlocks.LlmAgentHelper, Meta.XR.MLRunnerBlocks,
+          Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: selectedPrompt
+        _editorSelectedGizmoIndex: 0
+      - enabled: 0
+        typeName: Meta.XR.MLRunnerBlocks.LlmAgentHelper, Meta.XR.MLRunnerBlocks,
+          Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: promptImage
+        _editorSelectedGizmoIndex: 0
+      - enabled: 0
+        typeName: Meta.XR.MLRunnerBlocks.LlmAgentHelper, Meta.XR.MLRunnerBlocks,
+          Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: includeImage
+        _editorSelectedGizmoIndex: 0
+      - enabled: 0
+        typeName: Meta.XR.MLRunnerBlocks.LlmAgentHelper, Meta.XR.MLRunnerBlocks,
+          Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: _agent
+        _editorSelectedGizmoIndex: 0
+      - enabled: 0
+        typeName: Meta.XR.MLRunnerBlocks.LlmAgentHelper, Meta.XR.MLRunnerBlocks,
+          Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: _lastPrompt
+        _editorSelectedGizmoIndex: 0
+      - enabled: 0
+        typeName: Meta.XR.MLRunnerBlocks.LlmAgentHelper, Meta.XR.MLRunnerBlocks,
+          Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: _lastText
+        _editorSelectedGizmoIndex: 0
+    - enabled: 0
+      typeName: Meta.XR.BuildingBlocks.AIBlocks.LlmAgent, Meta.XR.BuildingBlocks.AIBlocks,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      inspectedMembers:
+      - enabled: 0
+        typeName: Meta.XR.BuildingBlocks.AIBlocks.LlmAgent, Meta.XR.BuildingBlocks.AIBlocks,
+          Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: Awake
+        _editorSelectedGizmoIndex: 0
+      - enabled: 0
+        typeName: Meta.XR.BuildingBlocks.AIBlocks.LlmAgent, Meta.XR.BuildingBlocks.AIBlocks,
+          Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: History
+        _editorSelectedGizmoIndex: 0
+      - enabled: 0
+        typeName: Meta.XR.BuildingBlocks.AIBlocks.LlmAgent, Meta.XR.BuildingBlocks.AIBlocks,
+          Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: CanCapture
+        _editorSelectedGizmoIndex: 0
+      - enabled: 0
+        typeName: Meta.XR.BuildingBlocks.AIBlocks.LlmAgent, Meta.XR.BuildingBlocks.AIBlocks,
+          Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: llmProviderProfile
+        _editorSelectedGizmoIndex: 0
+      - enabled: 0
+        typeName: Meta.XR.BuildingBlocks.AIBlocks.LlmAgent, Meta.XR.BuildingBlocks.AIBlocks,
+          Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: onPromptSent
+        _editorSelectedGizmoIndex: 0
+      - enabled: 0
+        typeName: Meta.XR.BuildingBlocks.AIBlocks.LlmAgent, Meta.XR.BuildingBlocks.AIBlocks,
+          Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: onResponseReceived
+        _editorSelectedGizmoIndex: 0
+      - enabled: 0
+        typeName: Meta.XR.BuildingBlocks.AIBlocks.LlmAgent, Meta.XR.BuildingBlocks.AIBlocks,
+          Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: onImageCaptured
+        _editorSelectedGizmoIndex: 0
+      - enabled: 0
+        typeName: Meta.XR.BuildingBlocks.AIBlocks.LlmAgent, Meta.XR.BuildingBlocks.AIBlocks,
+          Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: _history
+        _editorSelectedGizmoIndex: 0
+      - enabled: 0
+        typeName: Meta.XR.BuildingBlocks.AIBlocks.LlmAgent, Meta.XR.BuildingBlocks.AIBlocks,
+          Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: _provider
+        _editorSelectedGizmoIndex: 0
+      - enabled: 0
+        typeName: Meta.XR.BuildingBlocks.AIBlocks.LlmAgent, Meta.XR.BuildingBlocks.AIBlocks,
+          Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: _cam
+        _editorSelectedGizmoIndex: 0
+      - enabled: 0
+        typeName: Meta.XR.BuildingBlocks.AIBlocks.LlmAgent, Meta.XR.BuildingBlocks.AIBlocks,
+          Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: ProviderSupportsVision
+        _editorSelectedGizmoIndex: 0
+      - enabled: 0
+        typeName: Meta.XR.BuildingBlocks.AIBlocks.LlmAgent, Meta.XR.BuildingBlocks.AIBlocks,
+          Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: providerAsset
+        _editorSelectedGizmoIndex: 0
+      - enabled: 0
+        typeName: Meta.XR.BuildingBlocks.AIBlocks.LlmAgent, Meta.XR.BuildingBlocks.AIBlocks,
+          Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: _chatTask
+        _editorSelectedGizmoIndex: 0
+      - enabled: 0
+        typeName: Meta.XR.BuildingBlocks.AIBlocks.LlmAgent, Meta.XR.BuildingBlocks.AIBlocks,
+          Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: CaptureMaxResolution
+        _editorSelectedGizmoIndex: 0
+      - enabled: 0
+        typeName: Meta.XR.BuildingBlocks.AIBlocks.LlmAgent, Meta.XR.BuildingBlocks.AIBlocks,
+          Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: SystemPrompt
+        _editorSelectedGizmoIndex: 0
+      - enabled: 0
+        typeName: Meta.XR.BuildingBlocks.AIBlocks.LlmAgent, Meta.XR.BuildingBlocks.AIBlocks,
+          Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: systemPrompt
+        _editorSelectedGizmoIndex: 0
+      - enabled: 0
+        typeName: Meta.XR.BuildingBlocks.AIBlocks.LlmAgent, Meta.XR.BuildingBlocks.AIBlocks,
+          Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: enableStreaming
+        _editorSelectedGizmoIndex: 0
+      - enabled: 0
+        typeName: Meta.XR.BuildingBlocks.AIBlocks.LlmAgent, Meta.XR.BuildingBlocks.AIBlocks,
+          Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: captureMaxResolution
+        _editorSelectedGizmoIndex: 0
+      - enabled: 0
+        typeName: Meta.XR.BuildingBlocks.AIBlocks.LlmAgent, Meta.XR.BuildingBlocks.AIBlocks,
+          Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: _unityProvider
+        _editorSelectedGizmoIndex: 0
+      - enabled: 0
+        typeName: Meta.XR.BuildingBlocks.AIBlocks.LlmAgent, Meta.XR.BuildingBlocks.AIBlocks,
+          Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: onStreamingDelta
+        _editorSelectedGizmoIndex: 0
+    - enabled: 1
+      typeName: Meta.XR.BuildingBlocks.AIBlocks.LlmAgentHelper, Meta.XR.BuildingBlocks.AIBlocks,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      inspectedMembers:
+      - enabled: 0
+        typeName: Meta.XR.BuildingBlocks.AIBlocks.LlmAgentHelper, Meta.XR.BuildingBlocks.AIBlocks,
+          Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: Awake
+        _editorSelectedGizmoIndex: 0
+      - enabled: 0
+        typeName: Meta.XR.BuildingBlocks.AIBlocks.LlmAgentHelper, Meta.XR.BuildingBlocks.AIBlocks,
+          Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: OnDestroy
+        _editorSelectedGizmoIndex: 0
+      - enabled: 0
+        typeName: Meta.XR.BuildingBlocks.AIBlocks.LlmAgentHelper, Meta.XR.BuildingBlocks.AIBlocks,
+          Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: Update
+        _editorSelectedGizmoIndex: 0
+      - enabled: 1
+        typeName: Meta.XR.BuildingBlocks.AIBlocks.LlmAgentHelper, Meta.XR.BuildingBlocks.AIBlocks,
+          Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: SendPrompt
+        _editorSelectedGizmoIndex: 0
+      - enabled: 0
+        typeName: Meta.XR.BuildingBlocks.AIBlocks.LlmAgentHelper, Meta.XR.BuildingBlocks.AIBlocks,
+          Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: userInput
+        _editorSelectedGizmoIndex: 0
+      - enabled: 1
+        typeName: Meta.XR.BuildingBlocks.AIBlocks.LlmAgentHelper, Meta.XR.BuildingBlocks.AIBlocks,
+          Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: selectedPrompt
+        _editorSelectedGizmoIndex: 0
+      - enabled: 1
+        typeName: Meta.XR.BuildingBlocks.AIBlocks.LlmAgentHelper, Meta.XR.BuildingBlocks.AIBlocks,
+          Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: promptImage
+        _editorSelectedGizmoIndex: 0
+      - enabled: 1
+        typeName: Meta.XR.BuildingBlocks.AIBlocks.LlmAgentHelper, Meta.XR.BuildingBlocks.AIBlocks,
+          Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: includeImage
+        _editorSelectedGizmoIndex: 0
+      - enabled: 0
+        typeName: Meta.XR.BuildingBlocks.AIBlocks.LlmAgentHelper, Meta.XR.BuildingBlocks.AIBlocks,
+          Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: useEditorFakeCameraPreview
+        _editorSelectedGizmoIndex: 0
+      - enabled: 0
+        typeName: Meta.XR.BuildingBlocks.AIBlocks.LlmAgentHelper, Meta.XR.BuildingBlocks.AIBlocks,
+          Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: _agent
+        _editorSelectedGizmoIndex: 0
+      - enabled: 0
+        typeName: Meta.XR.BuildingBlocks.AIBlocks.LlmAgentHelper, Meta.XR.BuildingBlocks.AIBlocks,
+          Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: _lastPrompt
+        _editorSelectedGizmoIndex: 0
+      - enabled: 0
+        typeName: Meta.XR.BuildingBlocks.AIBlocks.LlmAgentHelper, Meta.XR.BuildingBlocks.AIBlocks,
+          Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: _lastText
+        _editorSelectedGizmoIndex: 0
+      - enabled: 0
+        typeName: Meta.XR.BuildingBlocks.AIBlocks.LlmAgentHelper, Meta.XR.BuildingBlocks.AIBlocks,
+          Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: _onImageCaptured
+        _editorSelectedGizmoIndex: 0
+      - enabled: 0
+        typeName: Meta.XR.BuildingBlocks.AIBlocks.LlmAgentHelper, Meta.XR.BuildingBlocks.AIBlocks,
+          Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: imageSource
+        _editorSelectedGizmoIndex: 0
+      - enabled: 0
+        typeName: Meta.XR.BuildingBlocks.AIBlocks.LlmAgentHelper, Meta.XR.BuildingBlocks.AIBlocks,
+          Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: promptImageUrl
+        _editorSelectedGizmoIndex: 0
+    - enabled: 0
+      typeName: Meta.XR.BuildingBlocks.BuildingBlock, Meta.XR.BuildingBlocks, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      inspectedMembers:
+      - enabled: 0
+        typeName: Meta.XR.BuildingBlocks.BuildingBlock, Meta.XR.BuildingBlocks, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: Awake
+        _editorSelectedGizmoIndex: 0
+      - enabled: 0
+        typeName: Meta.XR.BuildingBlocks.BuildingBlock, Meta.XR.BuildingBlocks, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: ResetInstanceId
+        _editorSelectedGizmoIndex: 0
+      - enabled: 0
+        typeName: Meta.XR.BuildingBlocks.BuildingBlock, Meta.XR.BuildingBlocks, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: Start
+        _editorSelectedGizmoIndex: 0
+      - enabled: 0
+        typeName: Meta.XR.BuildingBlocks.BuildingBlock, Meta.XR.BuildingBlocks, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: BlockId
+        _editorSelectedGizmoIndex: 0
+      - enabled: 0
+        typeName: Meta.XR.BuildingBlocks.BuildingBlock, Meta.XR.BuildingBlocks, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: InstanceId
+        _editorSelectedGizmoIndex: 0
+      - enabled: 0
+        typeName: Meta.XR.BuildingBlocks.BuildingBlock, Meta.XR.BuildingBlocks, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: Version
+        _editorSelectedGizmoIndex: 0
+      - enabled: 0
+        typeName: Meta.XR.BuildingBlocks.BuildingBlock, Meta.XR.BuildingBlocks, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: InstallationRoutineCheckpoint
+        _editorSelectedGizmoIndex: 0
+      - enabled: 0
+        typeName: Meta.XR.BuildingBlocks.BuildingBlock, Meta.XR.BuildingBlocks, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: blockId
+        _editorSelectedGizmoIndex: 0
+      - enabled: 0
+        typeName: Meta.XR.BuildingBlocks.BuildingBlock, Meta.XR.BuildingBlocks, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: instanceId
+        _editorSelectedGizmoIndex: 0
+      - enabled: 0
+        typeName: Meta.XR.BuildingBlocks.BuildingBlock, Meta.XR.BuildingBlocks, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: version
+        _editorSelectedGizmoIndex: 0
+      - enabled: 0
+        typeName: Meta.XR.BuildingBlocks.BuildingBlock, Meta.XR.BuildingBlocks, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: installationRoutineCheckpoint
+        _editorSelectedGizmoIndex: 0
+--- !u!114 &230515319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 230515317}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78fe762148452284580b7977321a431c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  userInput: Hello how are you doing?
+  selectedPrompt: 2
+  includeImage: 1
+  imageSource: 0
+  promptImage: {fileID: 2800000, guid: ba234129451db284baa574c1678e21ac, type: 3}
+  promptImageUrl: 
+--- !u!114 &230515320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 230515317}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b538056738080f84594e832a6af9a157, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  providerAsset: {fileID: 11400000, guid: f3a6d1152e903a54284c5359491aa32b, type: 2}
+  systemPrompt: You are a grumpy woman who will relunctantly respond.
+  enableStreaming: 1
+  captureMaxResolution: 0
+  onPromptSent:
+    m_PersistentCalls:
+      m_Calls: []
+  onResponseReceived:
+    m_PersistentCalls:
+      m_Calls: []
+  onStreamingDelta:
+    m_PersistentCalls:
+      m_Calls: []
+  onImageCaptured:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &230515321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 230515317}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b023183069df224080314a560e6e1ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Meta.XR.BuildingBlocks::Meta.XR.BuildingBlocks.BuildingBlock
+  blockId: ef19cfd3-3bb7-4107-9044-33fecdb8a359
+  instanceId: 8d2aa438-ab96-4f9a-b8aa-27cf7a9141f0
+  version: 1
+  installationRoutineCheckpoint:
+    _installationRoutineId: fb956d38-811e-4622-b453-c21ac1f76ff0
+    _installationVariants:
+    - _memberName: providerAssetSelection
+      _value: 
+    - _memberName: inferenceType
+      _value: '{"value__":4}'
+    - _memberName: modelProvider
+      _value: UnityInferenceEngine - SmolLM-135M
+    - _memberName: includeDebuggingTools
+      _value: '{}'
+--- !u!4 &230515322
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 230515317}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -246,6 +1742,164 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_RenderingLayers: 1
   m_ShadowRenderingLayers: 1
+--- !u!1 &490606043
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 490606045}
+  - component: {fileID: 490606044}
+  m_Layer: 0
+  m_Name: VoiceManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &490606044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 490606043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28779cfed47441a42a6cd4fb49c8dc89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: VoiceSDK.Runtime::Oculus.Voice.AppVoiceExperience
+  ShouldWrap: 1
+  ShouldLog: 1
+  events:
+    _onRequestOptionSetup:
+      m_PersistentCalls:
+        m_Calls: []
+    _onRequestInitialized:
+      m_PersistentCalls:
+        m_Calls: []
+    _onRequestCreated:
+      m_PersistentCalls:
+        m_Calls: []
+    _onSend:
+      m_PersistentCalls:
+        m_Calls: []
+    _onMinimumWakeThresholdHit:
+      m_PersistentCalls:
+        m_Calls: []
+    _onMicDataSent:
+      m_PersistentCalls:
+        m_Calls: []
+    _onStoppedListeningDueToDeactivation:
+      m_PersistentCalls:
+        m_Calls: []
+    _onStoppedListeningDueToInactivity:
+      m_PersistentCalls:
+        m_Calls: []
+    _onStoppedListeningDueToTimeout:
+      m_PersistentCalls:
+        m_Calls: []
+    _onAborting:
+      m_PersistentCalls:
+        m_Calls: []
+    _onAborted:
+      m_PersistentCalls:
+        m_Calls: []
+    _onCanceled:
+      m_PersistentCalls:
+        m_Calls: []
+    _onRawResponse:
+      m_PersistentCalls:
+        m_Calls: []
+    _onPartialResponse:
+      m_PersistentCalls:
+        m_Calls: []
+    _onResponse:
+      m_PersistentCalls:
+        m_Calls: []
+    _onError:
+      m_PersistentCalls:
+        m_Calls: []
+    _onRequestCompleted:
+      m_PersistentCalls:
+        m_Calls: []
+    _onComplete:
+      m_PersistentCalls:
+        m_Calls: []
+    _onStartListening:
+      m_PersistentCalls:
+        m_Calls: []
+    _onStoppedListening:
+      m_PersistentCalls:
+        m_Calls: []
+    _onMicLevelChanged:
+      m_PersistentCalls:
+        m_Calls: []
+    _onPartialTranscription:
+      m_PersistentCalls:
+        m_Calls: []
+    _onFullTranscription:
+      m_PersistentCalls:
+        m_Calls: []
+    _onUserPartialTranscription:
+      m_PersistentCalls:
+        m_Calls: []
+    _onUserFullTranscription:
+      m_PersistentCalls:
+        m_Calls: []
+    _onByteDataReady:
+      m_PersistentCalls:
+        m_Calls: []
+    _onByteDataSent:
+      m_PersistentCalls:
+        m_Calls: []
+    _onValidatePartialResponse:
+      m_PersistentCalls:
+        m_Calls: []
+  witRuntimeConfiguration:
+    witConfiguration: {fileID: 11400000, guid: 35f5b112a15dcf44f87269b13f719c01, type: 2}
+    minKeepAliveVolume: 0.0005
+    minKeepAliveTimeInSeconds: 2
+    minTranscriptionKeepAliveTimeInSeconds: 1
+    maxRecordingTime: 20
+    overrideTimeoutMs: 0
+    soundWakeThreshold: 0.0005
+    sampleLengthInMs: 10
+    micBufferLengthInSeconds: 1
+    maxConcurrentRequests: 5
+    sendAudioToWit: 1
+    customTranscriptionProvider: {fileID: 0}
+    alwaysRecord: 0
+    preferredActivationOffset: -0.5
+    transcribeOnly: 0
+    pubSubSettings:
+      PubSubTopicId: 
+      PublishOptions:
+        transcriptionResponses: 1
+        composerResponses: 1
+      SubscribeOptions:
+        transcriptionResponses: 1
+        composerResponses: 1
+  usePlatformServices: 0
+  enableConsoleLogging: 0
+  sendTranscriptionEventsForMessages: 0
+--- !u!4 &490606045
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 490606043}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.0121, y: 0, z: 0.77938}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &721367125
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -428,6 +2082,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2190620469232301150, guid: 02a277ae36e0fde4eb566d43ce1c9c56, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4105654751452254053, guid: 02a277ae36e0fde4eb566d43ce1c9c56, type: 3}
       propertyPath: m_Name
       value: VR Player
@@ -475,6 +2133,22 @@ PrefabInstance:
     - target: {fileID: 5301855943961252457, guid: 02a277ae36e0fde4eb566d43ce1c9c56, type: 3}
       propertyPath: m_ConstrainProportionsScale
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5388258070238525985, guid: 02a277ae36e0fde4eb566d43ce1c9c56, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5921914535287903480, guid: 02a277ae36e0fde4eb566d43ce1c9c56, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7119136429488753168, guid: 02a277ae36e0fde4eb566d43ce1c9c56, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8699066132954013930, guid: 02a277ae36e0fde4eb566d43ce1c9c56, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -741,3 +2415,5 @@ SceneRoots:
   - {fileID: 2090337767}
   - {fileID: 721367125}
   - {fileID: 1042040599}
+  - {fileID: 230515322}
+  - {fileID: 490606045}
