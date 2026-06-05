@@ -9,8 +9,12 @@ using TMPro;
 // Put this on each Agent GameObject
 public class GeminiAgent : MonoBehaviour
 {
+    // Customize this prompt to define your agent's personality and behavior
     [TextArea(3, 10)]
-    public string systemPrompt = "You are a helpful assistant.";
+    public string systemPrompt = "Always start every response with an emotion tag in this exact format: [Happy], [Sad], or [Angry]. " +
+                                 "Choose the emotion that best fits your response." +
+                                 "Limit your responses to one to two sentences with a max character limit of 30 words" +
+                                 "You are a female college student who is friendly and extroverted."; 
 
     [SerializeField] private string apiKey = "YOUR_GEMINI_KEY"; //Andrew's Gemini Key
 
@@ -74,7 +78,9 @@ public class GeminiAgent : MonoBehaviour
         if (request.result == UnityWebRequest.Result.Success)
         {
             string responseText = ParseGeminiResponse(request.downloadHandler.text);
+            string emotion = ParseEmotion(responseText, out string cleanText);
             Debug.Log($"[{gameObject.name}] Response: {responseText}");
+            Debug.Log($"[{gameObject.name}] Emotion: {emotion}");
 
             // Add assistant response to history so agent remembers it
             chatHistory.Add(new Dictionary<string, object>
@@ -84,7 +90,7 @@ public class GeminiAgent : MonoBehaviour
             });
 
             // TODO: Display response in UI or TTS here
-            OnResponseReceived(responseText);
+            OnResponseReceived(cleanText, emotion);
         }
         else
         {
@@ -101,11 +107,40 @@ public class GeminiAgent : MonoBehaviour
         return parts[0]["text"].ToString();
     }
 
-    void OnResponseReceived(string response)
+    string ParseEmotion(string response, out string cleanResponse)
+    {
+        string emotion = "Happy"; // default
+
+        if (response.StartsWith("[Happy]"))
+        {
+            emotion = "Happy";
+            cleanResponse = response.Substring("[Happy]".Length).Trim();
+        }
+        else if (response.StartsWith("[Sad]"))
+        {
+            emotion = "Sad";
+            cleanResponse = response.Substring("[Sad]".Length).Trim();
+        }
+        else if (response.StartsWith("[Angry]"))
+        {
+            emotion = "Angry";
+            cleanResponse = response.Substring("[Angry]".Length).Trim();
+        }
+        else
+        {
+            cleanResponse = response;
+        }
+
+        return emotion;
+    }
+
+    void OnResponseReceived(string response, string emotion)
     {
         // Hook up your UI text or TTS here
         isSpeaking = true;
         StartCoroutine(ShowText(response));
+
+        //TODO: Hook up emotion to animation
     }
 
     IEnumerator ShowText(string text)
