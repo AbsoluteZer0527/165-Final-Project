@@ -11,14 +11,14 @@ public class SelectorManipulator : MonoBehaviour
 
     public void OnHoverEnter(HoverEnterEventArgs args)
     {
-        MeshRenderer meshRenderer = args.interactableObject.transform.GetComponent<MeshRenderer>(); 
+        SkinnedMeshRenderer meshRenderer = args.interactableObject.transform.GetComponent<SkinnedMeshRenderer>(); 
         origMaterial = meshRenderer.material;
         meshRenderer.material = selectedMaterial;
     }
 
     public void OnHoverExit(HoverExitEventArgs args)
     {
-        args.interactableObject.transform.GetComponent<MeshRenderer>().material = origMaterial;
+        args.interactableObject.transform.GetComponent<SkinnedMeshRenderer>().material = origMaterial;
     }
 
     public void OnSelectEnter(SelectEnterEventArgs args)

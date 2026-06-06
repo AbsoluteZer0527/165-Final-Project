@@ -12,15 +12,17 @@ public class GeminiAgent : MonoBehaviour
     // Customize this prompt to define your agent's personality and behavior
     [TextArea(3, 10)]
     public string systemPrompt = "Always start every response with an emotion tag in this exact format: [Happy], [Sad], or [Angry]. " +
-                                 "Choose the emotion that best fits your response." +
-                                 "Limit your responses to one to two sentences with a max character limit of 30 words" +
-                                 "You are a female college student who is friendly and extroverted."; 
+                                 "Choose the emotion that best fits your response. " +
+                                 "Limit your responses to one to two sentences with a max character limit of 30 words. " +
+                                 "You are a female college student. "; 
 
     [SerializeField] private string apiKey = "YOUR_GEMINI_KEY"; //Andrew's Gemini Key
 
     [Header("References")]
     [SerializeField] private Transform playerTransform;
     [SerializeField] private TextMeshProUGUI textBubble;
+
+    public float responseDisplayTime = 5f; // How long the text bubble stays visible
 
     private string endpoint = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent";
 
@@ -141,13 +143,14 @@ public class GeminiAgent : MonoBehaviour
         StartCoroutine(ShowText(response));
 
         //TODO: Hook up emotion to animation
+        GetComponent<NPCBehavior>().ReactToPlayerMessage(emotion);
     }
 
     IEnumerator ShowText(string text)
     {
         textBubble.text = text;
         textBubble.transform.parent.gameObject.SetActive(true);
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(responseDisplayTime);
         textBubble.text = "";
         textBubble.transform.parent.gameObject.SetActive(false);
         isSpeaking = false;
