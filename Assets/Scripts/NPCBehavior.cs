@@ -1,29 +1,37 @@
+using Unity.VisualScripting;
 using Unity.XR.CoreUtils;
 using UnityEngine;
 using UnityEngine.AI;
 
 public class NPCBehavior : MonoBehaviour
 {
+    public enum NPCState // 0=Idle, 1=Walking, 2=Sad, 3=Happy, 4=Angry
+    {
+        Idle, Walking, Sad, Happy, Angry
+    }
+
     private Animator animator;
-    
+    private XROrigin playerOrigin;
+    private NavMeshAgent navMeshAgent;
+
     [Header("Movement Settings")]
     public float changeStateInterval = 5f; // How long they do an action
     public float moveSpeed = 2f;
     public Vector2 moveDistanceRange = new(1, 5);
 
     [HideInInspector] public bool IsNearPlayer; // Set by the trigger zone when the player is close
-    [HideInInspector] public int CurrentState = 0; // 0=Idle, 1=Walking, 2=Sad, 3=Happy, 4=Angry
+    [HideInInspector] public NPCState CurrentState = NPCState.Idle; 
 
     private float timer;
     private Vector3 moveDirection;
     private Vector3 targetPosition;
 
-    private XROrigin playerOrigin;
-
     void Start()
     {
         animator = GetComponent<Animator>();
+        navMeshAgent = GetComponent<NavMeshAgent>();
         playerOrigin = FindAnyObjectByType<XROrigin>();
+
         timer = changeStateInterval;
         DetermineNextBehavior();
     }
@@ -32,6 +40,7 @@ public class NPCBehavior : MonoBehaviour
     {
         if (IsNearPlayer)
         {
+            navMeshAgent.destination = transform.position;
             transform.LookAt(playerOrigin.transform);
             transform.rotation = Quaternion.Euler(0, transform.eulerAngles.y, 0);
             return;
@@ -44,57 +53,102 @@ public class NPCBehavior : MonoBehaviour
             timer = changeStateInterval; // Reset timer
         }
 
-        // Move the NPC if they are in the walking state (State 1)
-        if (CurrentState == 1)
+        if (CurrentState == NPCState.Walking)
         {
-            transform.position = Vector3.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
+            navMeshAgent.destination = targetPosition;
 
-            if (moveDirection != Vector3.zero)
-            {
-                transform.forward = moveDirection;
-            }
-
-            if (transform.position == targetPosition)
+            if (Vector3.Magnitude(transform.position - targetPosition) < 0.1f)
             {
                 CurrentState = 0;
             }
         }
+        else
+        {
+            navMeshAgent.destination = transform.position;
+        }
 
-        animator.SetInteger("State", CurrentState);
+        animator.SetInteger("State", (int)CurrentState);
     }
 
     void DetermineNextBehavior()
     {
-        // 1. Roll a percentage dice (0.0 to 1.0)
         float diceRoll = Random.value;
 
+        // Go to random point on NavMesh
         if (diceRoll < 0.50f) 
         {
-            // 50% CHANCE: Walk around
-            CurrentState = 1; 
-            
-            // Pick a random direction on the ground plane
-            float randomAngle = Random.Range(0f, 360f);
-            moveDirection = new Vector3(Mathf.Sin(randomAngle), 0, Mathf.Cos(randomAngle)).normalized;
+            CurrentState = NPCState.Walking;
 
-            NavMesh.SamplePosition(transform.position + moveDirection * Random.Range(moveDistanceRange.x, moveDistanceRange.y), out NavMeshHit hit, moveDistanceRange.y, 1);
-            targetPosition = hit.position;
+            // Calculate random point on mesh
+            NavMeshTriangulation triangles = NavMesh.CalculateTriangulation();
+            Mesh mesh = new()
+            {
+                vertices = triangles.vertices,
+                triangles = triangles.indices
+            };
+
+            int[] tris = mesh.triangles;
+            Vector3[] verts = mesh.vertices;
+
+            // Calculate triangle areas via 1/2 * AB cross AC, CSE 167 ahh code follows
+            float[] triAreas = new float[tris.Length / 3];
+            for (int i = 0; i < triAreas.Length; i++)
+            {
+                triAreas[i] = 0.5f * Vector3.Cross(verts[tris[i * 3]] - verts[tris[i * 3 + 1]], verts[tris[i * 3]] - verts[tris[i * 3 + 2]]).magnitude;
+            }
+
+            // Random weighted sample to choose random triangle
+            float[] triAreasSum = new float[triAreas.Length];
+            float areaSum = 0;
+            for (int i = 0; i < triAreas.Length; i++)
+            {
+                areaSum += triAreas[i];
+                triAreasSum[i] = areaSum;
+            }
+
+            int triIndex = 0;
+            float randomsample = Random.value * areaSum;
+
+            for (int i = 0; i < triAreas.Length; i++)
+            {
+                if (randomsample <= triAreasSum[i])
+                {
+                    triIndex = i;
+                    break;
+                }
+            }
+
+            // Random sample in chosen triangle in barycentric coords
+            Vector3 a = mesh.vertices[mesh.triangles[triIndex * 3]];
+            Vector3 b = mesh.vertices[mesh.triangles[triIndex * 3 + 1]];
+            Vector3 c = mesh.vertices[mesh.triangles[triIndex * 3 + 2]];
+
+            float r = Random.value;
+            float s = Random.value;
+
+            if (r + s >= 1)
+            {
+                r = 1 - r;
+                s = 1 - s;
+            }
+
+            // Barycentric to world coords
+            Vector3 randomPoint = a + r * (b - a) + s * (c - a);
+            targetPosition = randomPoint;
         }
         else 
         {
-            // 50% CHANCE: Stay Idle / Stand around
-            // Let's decide if they just stand normally or show an emotion
             float emotionRoll = Random.value;
 
+            // Random emotion animation
             if (emotionRoll < 0.40f)
             {
-                // 40% of the time while standing, choose a random emotion (State 2, 3, or 4)
-                CurrentState = Random.Range(2, 5); 
+                CurrentState = (NPCState)Random.Range(2, 5); 
             }
+            // Idle animation
             else
             {
-                // 60% of the time while standing, just play regular boring Idle
-                CurrentState = 0; 
+                CurrentState = NPCState.Idle; 
             }
         }
     }
@@ -104,16 +158,16 @@ public class NPCBehavior : MonoBehaviour
         switch (emotionTag)
         {
             case "Sad":
-                CurrentState = 2; // Sad
+                CurrentState = NPCState.Sad;
                 break;
             case "Happy":
-                CurrentState = 3; // Happy
+                CurrentState = NPCState.Happy;
                 break;
             case "Angry":
-                CurrentState = 4; // Angry
+                CurrentState = NPCState.Angry;
                 break;
             default:
-                return; // If we get an unrecognized tag, do nothing
+                return;
         }
     }
 }

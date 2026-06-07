@@ -27,7 +27,7 @@ public class NPCTriggerZone : MonoBehaviour
             npcBehavior.IsNearPlayer = true;
             npcBehavior.CurrentState = 0;
             Animator animator = npcBehavior.GetComponent<Animator>();
-            animator.SetInteger("State", npcBehavior.CurrentState);
+            animator.SetInteger("State", (int)npcBehavior.CurrentState);
             npcsInZone.Add(npcBehavior);
             agentInZone = true;
         }
