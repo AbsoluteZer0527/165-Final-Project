@@ -28,7 +28,6 @@ public class NPCTriggerZone : MonoBehaviour
             npcBehavior.CurrentState = 0;
             Animator animator = npcBehavior.GetComponent<Animator>();
             animator.SetInteger("State", npcBehavior.CurrentState);
-            npcBehavior.GetComponent<Rigidbody>().linearVelocity = Vector3.zero;
             npcsInZone.Add(npcBehavior);
             agentInZone = true;
         }
