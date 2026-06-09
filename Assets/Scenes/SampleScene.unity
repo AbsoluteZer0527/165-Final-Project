@@ -357,6 +357,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPCTriggerZone
   vrPlayer: {fileID: 1883048718}
+  npcsInZone: []
 --- !u!64 &223276764
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1477,7 +1478,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 2c6aad8921fa3b4439bdd1a9af3d4c12, type: 3}
       propertyPath: m_Name
-      value: Orc Idle
+      value: Otis
       objectReference: {fileID: 0}
     - target: {fileID: 5866666021909216657, guid: 2c6aad8921fa3b4439bdd1a9af3d4c12, type: 3}
       propertyPath: m_Controller
@@ -4232,6 +4233,10 @@ PrefabInstance:
     - target: {fileID: 150576661855347876, guid: a874ecbf4c47b4e47affa98be069951e, type: 3}
       propertyPath: m_Layer
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 582165054712813573, guid: a874ecbf4c47b4e47affa98be069951e, type: 3}
+      propertyPath: offset.y
+      value: 2.2
       objectReference: {fileID: 0}
     - target: {fileID: 2126042754471952911, guid: a874ecbf4c47b4e47affa98be069951e, type: 3}
       propertyPath: m_Layer
