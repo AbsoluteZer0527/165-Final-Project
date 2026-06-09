@@ -1419,70 +1419,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1023776345}
     m_Modifications:
-    - target: {fileID: -3420941610899207910, guid: 0d34be7d71b712f4180c1abda94118d4, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4939161678642713171, guid: 0d34be7d71b712f4180c1abda94118d4, type: 3}
-      propertyPath: m_AABB.m_Center.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4939161678642713171, guid: 0d34be7d71b712f4180c1abda94118d4, type: 3}
-      propertyPath: m_AABB.m_Center.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4939161678642713171, guid: 0d34be7d71b712f4180c1abda94118d4, type: 3}
-      propertyPath: m_AABB.m_Center.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4939161678642713171, guid: 0d34be7d71b712f4180c1abda94118d4, type: 3}
-      propertyPath: m_AABB.m_Extent.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4939161678642713171, guid: 0d34be7d71b712f4180c1abda94118d4, type: 3}
-      propertyPath: m_AABB.m_Extent.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4939161678642713171, guid: 0d34be7d71b712f4180c1abda94118d4, type: 3}
-      propertyPath: m_AABB.m_Extent.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5472622940992281205, guid: 0d34be7d71b712f4180c1abda94118d4, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5472622940992281205, guid: 0d34be7d71b712f4180c1abda94118d4, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5472622940992281205, guid: 0d34be7d71b712f4180c1abda94118d4, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5472622940992281205, guid: 0d34be7d71b712f4180c1abda94118d4, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5472622940992281205, guid: 0d34be7d71b712f4180c1abda94118d4, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5472622940992281205, guid: 0d34be7d71b712f4180c1abda94118d4, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5472622940992281205, guid: 0d34be7d71b712f4180c1abda94118d4, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5472622940992281205, guid: 0d34be7d71b712f4180c1abda94118d4, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5472622940992281205, guid: 0d34be7d71b712f4180c1abda94118d4, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2c6aad8921fa3b4439bdd1a9af3d4c12, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -1553,6 +1489,70 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5866666021909216657, guid: 2c6aad8921fa3b4439bdd1a9af3d4c12, type: 3}
       propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -3420941610899207910, guid: 0d34be7d71b712f4180c1abda94118d4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4939161678642713171, guid: 0d34be7d71b712f4180c1abda94118d4, type: 3}
+      propertyPath: m_AABB.m_Center.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4939161678642713171, guid: 0d34be7d71b712f4180c1abda94118d4, type: 3}
+      propertyPath: m_AABB.m_Center.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4939161678642713171, guid: 0d34be7d71b712f4180c1abda94118d4, type: 3}
+      propertyPath: m_AABB.m_Center.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4939161678642713171, guid: 0d34be7d71b712f4180c1abda94118d4, type: 3}
+      propertyPath: m_AABB.m_Extent.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4939161678642713171, guid: 0d34be7d71b712f4180c1abda94118d4, type: 3}
+      propertyPath: m_AABB.m_Extent.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4939161678642713171, guid: 0d34be7d71b712f4180c1abda94118d4, type: 3}
+      propertyPath: m_AABB.m_Extent.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5472622940992281205, guid: 0d34be7d71b712f4180c1abda94118d4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5472622940992281205, guid: 0d34be7d71b712f4180c1abda94118d4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5472622940992281205, guid: 0d34be7d71b712f4180c1abda94118d4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5472622940992281205, guid: 0d34be7d71b712f4180c1abda94118d4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5472622940992281205, guid: 0d34be7d71b712f4180c1abda94118d4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5472622940992281205, guid: 0d34be7d71b712f4180c1abda94118d4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5472622940992281205, guid: 0d34be7d71b712f4180c1abda94118d4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5472622940992281205, guid: 0d34be7d71b712f4180c1abda94118d4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5472622940992281205, guid: 0d34be7d71b712f4180c1abda94118d4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1998,7 +1998,8 @@ MonoBehaviour:
   systemPrompt: 'Always start every response with an emotion tag in this exact format:
     [Happy], [Sad], or [Angry]. Choose the emotion that best fits your response.
     Limit your responses to one to two sentences with a max character limit of 30
-    words. You are a female working adult looking for love at a bar. '
+    words. You are a female working adult named Michelle who enjoys music and is
+    looking for love at a bar.'
   apiKey: YOUR GEMINI KEY
   playerTransform: {fileID: 1883048718}
   textBubble: {fileID: 1283482248}
@@ -4005,9 +4006,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GeminiAgent
   systemPrompt: 'Always start every response with an emotion tag in this exact format:
-    [Happy], [Sad], or [Angry]. Choose the emotion that best fits your response.Limit
-    your responses to one to two sentences with a max character limit of 30 words.
-    You are a female college studentn who is at a bar for fun.'
+    [Happy], [Sad], or [Angry]. Choose the emotion that best fits your response.
+    Limit your responses to one to two sentences with a max character limit of 30
+    words. You are a female college student named Jakie who is at a bar for fun.'
   apiKey: YOUR GEMINI KEY
   playerTransform: {fileID: 1883048718}
   textBubble: {fileID: 1308183621}
@@ -5422,10 +5423,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GeminiAgent
   systemPrompt: 'Always start every response with an emotion tag in this exact format:
-    [Happy], [Sad], or [Angry]. Choose the emotion that best fits your response.Limit
-    your responses to one to two sentences with a max character limit of 30 words. 
-    You are a male tech company employee that just got off of work and right now
-    you are in a bar trying to get some drinks. '
+    [Happy], [Sad], or [Angry]. Choose the emotion that best fits your response.
+    Limit your responses to one to two sentences with a max character limit of 30
+    words. You are a male tech company employee named Joe that just got off of work
+    and right now you are in a bar trying to get some drinks. '
   apiKey: YOUR GEMINI KEY
   playerTransform: {fileID: 1883048718}
   textBubble: {fileID: 717684413}
@@ -5655,10 +5656,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GeminiAgent
   systemPrompt: 'Always start every response with an emotion tag in this exact format:
-    [Happy], [Sad], or [Angry]. Choose the emotion that best fits your response.Limit
-    your responses to one to two sentences with a max character limit of 30 words.
-    You are a bad temper mid-age guy that is the owner of this bar you are in right
-    now.'
+    [Happy], [Sad], or [Angry]. Choose the emotion that best fits your response.
+    Limit your responses to one to two sentences with a max character limit of 30
+    words. You are a bad tempered middle-aged guy named Otis that is the owner of
+    this bar you are in right now.'
   apiKey: YOUR GEMINI KEY
   playerTransform: {fileID: 1883048718}
   textBubble: {fileID: 984986183}
@@ -6634,7 +6635,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0fb72c2472bc1144aa74f6382e557b03, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.342
+      value: -4.569
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0fb72c2472bc1144aa74f6382e557b03, type: 3}
       propertyPath: m_LocalPosition.y
@@ -6642,7 +6643,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0fb72c2472bc1144aa74f6382e557b03, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.401
+      value: 0.602
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0fb72c2472bc1144aa74f6382e557b03, type: 3}
       propertyPath: m_LocalRotation.w
