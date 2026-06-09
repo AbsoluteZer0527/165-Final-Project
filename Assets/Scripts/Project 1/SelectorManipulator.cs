@@ -1,4 +1,4 @@
-using Unity.VisualScripting;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.XR.Interaction.Toolkit.Interactables;
@@ -6,19 +6,29 @@ using UnityEngine.XR.Interaction.Toolkit.Interactables;
 public class SelectorManipulator : MonoBehaviour
 {
     public Material selectedMaterial;
-    private Material origMaterial;
+    private List<Material> origMaterial = new();
     public InteractorScaleModule interactorScaleModule;
 
     public void OnHoverEnter(HoverEnterEventArgs args)
     {
-        SkinnedMeshRenderer meshRenderer = args.interactableObject.transform.GetComponent<SkinnedMeshRenderer>(); 
-        origMaterial = meshRenderer.material;
-        meshRenderer.material = selectedMaterial;
+        //SkinnedMeshRenderer meshRenderer = args.interactableObject.transform.GetComponent<SkinnedMeshRenderer>(); 
+        MeshRenderer[] meshRenderers = args.interactableObject.transform.GetComponentsInChildren<MeshRenderer>();
+        for (int i = 0; i < meshRenderers.Length; i++)
+        {
+            origMaterial.Add(meshRenderers[i].material);
+            meshRenderers[i].material = selectedMaterial;
+        }
     }
 
     public void OnHoverExit(HoverExitEventArgs args)
     {
-        args.interactableObject.transform.GetComponent<SkinnedMeshRenderer>().material = origMaterial;
+        //args.interactableObject.transform.GetComponent<SkinnedMeshRenderer>().material = origMaterial;
+        MeshRenderer[] meshRenderers = args.interactableObject.transform.GetComponentsInChildren<MeshRenderer>();
+        for (int i = 0; i < meshRenderers.Length; i++)
+        {
+            meshRenderers[i].material = origMaterial[i];
+        }
+        origMaterial.Clear();
     }
 
     public void OnSelectEnter(SelectEnterEventArgs args)
