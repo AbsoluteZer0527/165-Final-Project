@@ -6,7 +6,7 @@ public class NPCTriggerZone : MonoBehaviour
 {
     [SerializeField] private Transform vrPlayer;
     private bool agentInZone = false;
-    private List<NPCBehavior> npcsInZone = new();
+    public List<NPCBehavior> npcsInZone = new();
 
     private void Update()
     {

@@ -72,7 +72,7 @@ public class VoiceTranscription : MonoBehaviour
         foreach (var agent in agents)
         {
             float dist = Vector3.Distance(transform.position, agent.transform.position);
-            if (dist < minDist)
+            if (dist < minDist && FindAnyObjectByType<NPCTriggerZone>().npcsInZone.Find(x => x.GetComponent<GeminiAgent>().Equals(agent)) != null)
             {
                 minDist = dist;
                 nearest = agent;
